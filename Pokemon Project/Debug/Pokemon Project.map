@@ -1,0 +1,967 @@
+******************************************************************************
+                  TI ARM Linker PC v15.12.3                    
+******************************************************************************
+>> Linked Sat Dec 10 02:52:56 2016
+
+OUTPUT FILE NAME:   <Pokemon Project.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00005691
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  MAIN                  00000000   00040000  0000afa2  0003505e  R  X
+  INFO                  00200000   00004000  00000000  00004000  R  X
+  SRAM_CODE             01000000   00010000  00000bc8  0000f438  RW X
+  SRAM_DATA             20000000   00010000  00000bc8  0000f438  RW  
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0000afac   0000afac    r-x
+  00000000    00000000    00000140   00000140    r-- .intvecs
+  00000140    00000140    000058fa   000058fa    r-x .text
+  00005a40    00005a40    000050c4   000050c4    r-- .const
+  0000ab08    0000ab08    000004a4   000004a4    r-- .cinit
+20000000    20000000    000009c8   00000000    rw-
+  20000000    20000000    000000e4   00000000    rw- .vtable
+  200000e4    200000e4    00000494   00000000    rw- .data
+  20000578    20000578    00000450   00000000    rw- .bss
+2000fe00    2000fe00    00000200   00000000    rw-
+  2000fe00    2000fe00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000140     
+                  00000000    00000140     startup_msp432p401r_ccs.obj (.intvecs:retain)
+
+.binit     0    00000000    00000000     
+
+.text      0    00000140    000058fa     
+                  00000140    00001320     main.obj (.text)
+                  00001460    000008e0     adc14.obj (.text)
+                  00001d40    000008a4     spi.obj (.text)
+                  000025e4    00000678     Crystalfontz128x128_ST7735.obj (.text)
+                  00002c5c    00000630     string.obj (.text)
+                  0000328c    00000490     line.obj (.text)
+                  0000371c    00000480     gpio.obj (.text)
+                  00003b9c    00000452     image.obj (.text)
+                  00003fee    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : mpu_init.obj (.text)
+                  00003ff0    000003f0     interrupt.obj (.text)
+                  000043e0    0000033e     rectangle.obj (.text)
+                  0000471e    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : startup.obj (.text)
+                  00004720    00000328     system_msp432p401r.obj (.text)
+                  00004a48    00000266     context.obj (.text)
+                  00004cae    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.obj (.text)
+                  00004e64    00000136                                   : fd_div_t2.obj (.text)
+                  00004f9a    00000134     display.obj (.text)
+                  000050ce    00000002     --HOLE-- [fill = 0]
+                  000050d0    00000108     advantages.obj (.text)
+                  000051d8    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.obj (.text)
+                  000052d4    000000bc     HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj (.text)
+                  00005390    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  0000542c    00000086                                   : fd_cmp_t2.obj (.text:__aeabi_cdcmple)
+                  000054b2    00000086                                   : fd_cmp_t2.obj (.text:__aeabi_cdrcmple)
+                  00005538    0000007a                                   : memset_t2.obj (.text)
+                  000055b2    00000002     --HOLE-- [fill = 0]
+                  000055b4    00000070                                   : autoinit.obj (.text)
+                  00005624    0000006a                                   : copy_decompress_rle.obj (.text)
+                  0000568e    00000002     --HOLE-- [fill = 0]
+                  00005690    00000054                                   : boot.obj (.text)
+                  000056e4    00000054                                   : exit.obj (.text)
+                  00005738    0000004c                                   : atoi.obj (.text)
+                  00005784    0000004c                                   : cpy_tbl.obj (.text)
+                  000057d0    00000048                                   : fd_toi_t2.obj (.text)
+                  00005818    0000003e     cpu.obj (.text)
+                  00005856    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.obj (.text)
+                  00005884    00000020     aggron.obj (.text)
+                  000058a4    00000020     gengar.obj (.text)
+                  000058c4    00000020     gyrados.obj (.text)
+                  000058e4    00000020     jolteon.obj (.text)
+                  00005904    00000020     machoke.obj (.text)
+                  00005924    00000020     metagross.obj (.text)
+                  00005944    00000020     shiftry.obj (.text)
+                  00005964    00000020     swampert.obj (.text)
+                  00005984    00000020     swellow.obj (.text)
+                  000059a4    00000020     title.obj (.text)
+                  000059c4    00000020     typhlosion.obj (.text)
+                  000059e4    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  000059fc    00000014                                   : _lock.obj (.text)
+                  00005a10    00000012     startup_msp432p401r_ccs.obj (.text)
+                  00005a22    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  00005a30    00000006                                   : copy_decompress_rle.obj (.text:decompress:rle24)
+                  00005a36    00000004                                   : pre_init.obj (.text)
+
+.const     0    00005a40    000050c4     
+                  00005a40    00000f33     title.obj (.const:.string:pixel_title4BPP_COMP_RLE4)
+                  00006973    00000005     --HOLE-- [fill = 0]
+                  00006978    00000908     advantages.obj (.const:type_advantage)
+                  00007280    00000780     shiftry.obj (.const:.string:pixel_shiftry4BPP_COMP_RLE4)
+                  00007a00    000006f0     swellow.obj (.const:.string:pixel_swellow4BPP_COMP_RLE4)
+                  000080f0    00000641     gyrados.obj (.const:.string:pixel_gyrados4BPP_COMP_RLE4)
+                  00008731    00000474     gengar.obj (.const:.string:pixel_gengar4BPP_COMP_RLE4)
+                  00008ba5    000003b6     metagross.obj (.const:.string:pixel_metagross4BPP_COMP_RLE4)
+                  00008f5b    0000034d     machoke.obj (.const:.string:pixel_machoke4BPP_COMP_RLE4)
+                  000092a8    0000034c     swampert.obj (.const:.string:pixel_swampert4BPP_COMP_RLE4)
+                  000095f4    00000314     main.obj (.const:.string)
+                  00009908    000002f8     fontfixed6x8.obj (.const:.string:g_pucFontFixed6x8Data)
+                  00009c00    000002e1     typhlosion.obj (.const:.string:pixel_typhlosion4BPP_COMP_RLE4)
+                  00009ee1    00000299     jolteon.obj (.const:.string:pixel_jolteon4BPP_COMP_RLE4)
+                  0000a17a    00000240     aggron.obj (.const:.string:pixel_aggron4BPP_COMP_RLE4)
+                  0000a3ba    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.obj (.const:.string:_ctypes_)
+                  0000a4bb    00000001     --HOLE-- [fill = 0]
+                  0000a4bc    000000c8     fontfixed6x8.obj (.const:g_sFontFixed6x8)
+                  0000a584    00000080     adc14.obj (.const:_ctlRegs)
+                  0000a604    00000050     interrupt.obj (.const:g_pulRegs)
+                  0000a654    00000040     aggron.obj (.const:palette_aggron4BPP_COMP_RLE4)
+                  0000a694    00000040     gengar.obj (.const:palette_gengar4BPP_COMP_RLE4)
+                  0000a6d4    00000040     gyrados.obj (.const:palette_gyrados4BPP_COMP_RLE4)
+                  0000a714    00000040     jolteon.obj (.const:palette_jolteon4BPP_COMP_RLE4)
+                  0000a754    00000040     machoke.obj (.const:palette_machoke4BPP_COMP_RLE4)
+                  0000a794    00000040     metagross.obj (.const:palette_metagross4BPP_COMP_RLE4)
+                  0000a7d4    00000040     shiftry.obj (.const:palette_shiftry4BPP_COMP_RLE4)
+                  0000a814    00000040     swampert.obj (.const:palette_swampert4BPP_COMP_RLE4)
+                  0000a854    00000040     swellow.obj (.const:palette_swellow4BPP_COMP_RLE4)
+                  0000a894    00000040     title.obj (.const:palette_title4BPP_COMP_RLE4)
+                  0000a8d4    00000040     typhlosion.obj (.const:palette_typhlosion4BPP_COMP_RLE4)
+                  0000a914    0000002c     Crystalfontz128x128_ST7735.obj (.const:g_sCrystalfontz128x128)
+                  0000a940    00000020     interrupt.obj (.const:g_pulPriority)
+                  0000a960    0000001c     HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj (.const:$P$T0$1)
+                  0000a97c    0000001c     gpio.obj (.const:GPIO_PORT_TO_INT)
+                  0000a998    0000001c     main.obj (.const:spiMasterConfig)
+                  0000a9b4    00000010     aggron.obj (.const:aggron4BPP_COMP_RLE4)
+                  0000a9c4    00000010     gengar.obj (.const:gengar4BPP_COMP_RLE4)
+                  0000a9d4    00000010     gyrados.obj (.const:gyrados4BPP_COMP_RLE4)
+                  0000a9e4    00000010     jolteon.obj (.const:jolteon4BPP_COMP_RLE4)
+                  0000a9f4    00000010     machoke.obj (.const:machoke4BPP_COMP_RLE4)
+                  0000aa04    00000010     metagross.obj (.const:metagross4BPP_COMP_RLE4)
+                  0000aa14    00000010     shiftry.obj (.const:shiftry4BPP_COMP_RLE4)
+                  0000aa24    00000010     main.obj (.const:spiSlaveConfig)
+                  0000aa34    00000010     swampert.obj (.const:swampert4BPP_COMP_RLE4)
+                  0000aa44    00000010     swellow.obj (.const:swellow4BPP_COMP_RLE4)
+                  0000aa54    00000010     title.obj (.const:title4BPP_COMP_RLE4)
+                  0000aa64    00000010     typhlosion.obj (.const:typhlosion4BPP_COMP_RLE4)
+                  0000aa74    00000008     Crystalfontz128x128_ST7735.obj (.const:$P$T0$1)
+                  0000aa7c    00000008     main.obj (.const:$P$T0$1)
+                  0000aa84    00000008     main.obj (.const:$P$T1$2)
+                  0000aa8c    00000008     main.obj (.const:$P$T10$11)
+                  0000aa94    00000008     main.obj (.const:$P$T11$12)
+                  0000aa9c    00000008     main.obj (.const:$P$T2$3)
+                  0000aaa4    00000008     main.obj (.const:$P$T3$4)
+                  0000aaac    00000008     main.obj (.const:$P$T4$5)
+                  0000aab4    00000008     main.obj (.const:$P$T5$6)
+                  0000aabc    00000008     main.obj (.const:$P$T6$7)
+                  0000aac4    00000008     main.obj (.const:$P$T7$8)
+                  0000aacc    00000008     main.obj (.const:$P$T8$9)
+                  0000aad4    00000008     main.obj (.const:$P$T9$10)
+                  0000aadc    00000008     main.obj (.const:.string:portMapping)
+                  0000aae4    00000008     interrupt.obj (.const:g_pulDisRegs)
+                  0000aaec    00000008     interrupt.obj (.const:g_pulEnRegs)
+                  0000aaf4    00000008     interrupt.obj (.const:g_pulPendRegs)
+                  0000aafc    00000008     interrupt.obj (.const:g_pulUnpendRegs)
+
+.cinit     0    0000ab08    000004a4     
+                  0000ab08    00000465     (.cinit..data.load) [load image, compression = rle]
+                  0000af6d    00000003     --HOLE-- [fill = 0]
+                  0000af70    0000000b     (.cinit..bss.load) [load image, compression = rle]
+                  0000af7b    00000005     --HOLE-- [fill = 0]
+                  0000af80    00000009     (.cinit..vtable.load) [load image, compression = rle]
+                  0000af89    00000003     --HOLE-- [fill = 0]
+                  0000af8c    00000008     (__TI_handler_table)
+                  0000af94    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.vtable    0    20000000    000000e4     UNINITIALIZED
+                  20000000    000000e4     interrupt.obj (.vtable)
+
+.data      0    200000e4    00000494     UNINITIALIZED
+                  200000e4    000002c0     main.obj (.data:move_list)
+                  200003a4    00000160     main.obj (.data:pokemon_list)
+                  20000504    00000030     gpio.obj (.data:GPIO_PORT_TO_BASE)
+                  20000534    00000028     main.obj (.data)
+                  2000055c    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  20000568    00000008                                   : _lock.obj (.data:$O1$$)
+                  20000570    00000004                                   : stkdepth_vars.obj (.data)
+                  20000574    00000004     system_msp432p401r.obj (.data)
+
+.bss       0    20000578    00000450     UNINITIALIZED
+                  20000578    00000400     image.obj (.bss:g_pulConvertedPalette)
+                  20000978    0000001c     (.common:g_sContext)
+                  20000994    00000004     main.obj (.bss:resultsBuffer)
+                  20000998    00000008     (.common:enHP)
+                  200009a0    00000008     (.common:myHP)
+                  200009a8    00000008     (.common:onEneEff)
+                  200009b0    00000008     (.common:onYouEff)
+                  200009b8    00000002     main.obj (.bss)
+                  200009ba    00000002     (.common:Lcd_ScreenHeigth)
+                  200009bc    00000002     (.common:Lcd_ScreenWidth)
+                  200009be    00000002     (.common:Lcd_TouchTrim)
+                  200009c0    00000001     (.common:Lcd_FlagRead)
+                  200009c1    00000001     (.common:Lcd_FontSolid)
+                  200009c2    00000001     (.common:Lcd_Orientation)
+                  200009c3    00000001     (.common:Lcd_PenSolid)
+                  200009c4    00000001     (.common:enMove)
+                  200009c5    00000001     (.common:enemyPokemon)
+                  200009c6    00000001     (.common:last_button1)
+                  200009c7    00000001     (.common:myMove)
+
+.stack     0    2000fe00    00000200     UNINITIALIZED
+                  2000fe00    00000200     --HOLE--
+
+MODULE SUMMARY
+
+       Module                                               code    ro data   rw data
+       ------                                               ----    -------   -------
+    .\
+       main.obj                                             4896    936       2332   
+       system_msp432p401r.obj                               808     0         8      
+       startup_msp432p401r_ccs.obj                          18      320       0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               5722    1256      2340   
+                                                                                     
+    .\GrLib\fonts\
+       fontfixed6x8.obj                                     0       960       0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               0       960       0      
+                                                                                     
+    .\GrLib\grlib\
+       image.obj                                            1106    0         2048   
+       string.obj                                           1584    0         0      
+       line.obj                                             1168    0         0      
+       rectangle.obj                                        830     0         0      
+       context.obj                                          614     0         0      
+       display.obj                                          308     0         0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               5610    0         2048   
+                                                                                     
+    .\LcdDriver\
+       Crystalfontz128x128_ST7735.obj                       1656    52        20     
+       HAL_MSP_EXP432P401R_Crystalfontz128x128_ST7735.obj   188     28        0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               1844    80        20     
+                                                                                     
+    .\Pokemon Final Project\C Files\
+       title.obj                                            32      3971      0      
+       advantages.obj                                       264     2312      0      
+       shiftry.obj                                          32      2000      0      
+       swellow.obj                                          32      1856      0      
+       gyrados.obj                                          32      1681      0      
+       gengar.obj                                           32      1220      0      
+       metagross.obj                                        32      1030      0      
+       machoke.obj                                          32      925       0      
+       swampert.obj                                         32      924       0      
+       typhlosion.obj                                       32      817       0      
+       jolteon.obj                                          32      745       0      
+       aggron.obj                                           32      656       0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               616     18137     0      
+                                                                                     
+    .\driverlib\MSP432P4xx\
+       adc14.obj                                            2272    128       0      
+       spi.obj                                              2212    0         0      
+       interrupt.obj                                        1008    144       456    
+       gpio.obj                                             1152    28        96     
+       cpu.obj                                              62      0         0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               6706    300       552    
+                                                                                     
+    C:\ti\ccsv6\tools\compiler\arm_15.12.3.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       fd_add_t2.obj                                        438     0         0      
+       fd_div_t2.obj                                        310     0         0      
+       fd_cmp_t2.obj                                        268     0         0      
+       ctype.obj                                            0       257       0      
+       fd_mul_t2.obj                                        252     0         0      
+       memcpy_t2.obj                                        156     0         0      
+       memset_t2.obj                                        122     0         0      
+       autoinit.obj                                         112     0         0      
+       copy_decompress_rle.obj                              112     0         0      
+       exit.obj                                             84      0         24     
+       boot.obj                                             84      0         0      
+       atoi.obj                                             76      0         0      
+       cpy_tbl.obj                                          76      0         0      
+       fd_toi_t2.obj                                        72      0         0      
+       i_tofd_t2.obj                                        46      0         0      
+       _lock.obj                                            20      0         16     
+       args_main.obj                                        24      0         0      
+       copy_decompress_none.obj                             14      0         0      
+       stkdepth_vars.obj                                    0       0         8      
+       pre_init.obj                                         4       0         0      
+       mpu_init.obj                                         2       0         0      
+       startup.obj                                          2       0         0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Total:                                               2274    257       48     
+                                                                                     
+       Stack:                                               0       0         1024   
+       Linker Generated:                                    0       1177      0      
+    +--+----------------------------------------------------+-------+---------+---------+
+       Grand Total:                                         22772   22167     6032   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000af94 records: 3, size/record: 8, table size: 24
+	.data: load addr=0000ab08, load size=00000465 bytes, run addr=200000e4, run size=00000494 bytes, compression=rle
+	.bss: load addr=0000af70, load size=0000000b bytes, run addr=20000578, run size=00000450 bytes, compression=rle
+	.vtable: load addr=0000af80, load size=00000009 bytes, run addr=20000000, run size=000000e4 bytes, compression=rle
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000af8c records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                       
+-------   ----                                       
+00000539  ADC14_IRQHandler                           
+00001cb5  ADC14_clearInterruptFlag                   
+00001855  ADC14_configureConversionMemory            
+000016fd  ADC14_configureMultiSequenceMode           
+00001793  ADC14_configureSingleSampleMode            
+0000198d  ADC14_disableComparatorWindow              
+0000182b  ADC14_disableConversion                    
+00001c2f  ADC14_disableInterrupt                     
+000015d1  ADC14_disableModule                        
+00001bab  ADC14_disableReferenceBurst                
+00001611  ADC14_disableSampleTimer                   
+000018fd  ADC14_enableComparatorWindow               
+000017e9  ADC14_enableConversion                     
+00001c03  ADC14_enableInterrupt                      
+000015c9  ADC14_enableModule                         
+00001b95  ADC14_enableReferenceBurst                 
+000015e7  ADC14_enableSampleTimer                    
+00001c85  ADC14_getEnabledInterruptStatus            
+00001c5b  ADC14_getInterruptStatus                   
+00001ab5  ADC14_getMultiSequenceResult               
+00001687  ADC14_getResolution                        
+00001a9b  ADC14_getResult                            
+00001b21  ADC14_getResultArray                       
+00001627  ADC14_initModule                           
+00001837  ADC14_isBusy                               
+00001ce5  ADC14_registerInterrupt                    
+000019eb  ADC14_setComparatorWindowValue             
+00001bc1  ADC14_setPowerMode                         
+0000166d  ADC14_setResolution                        
+00001a71  ADC14_setResultFormat                      
+000016d3  ADC14_setSampleHoldTime                    
+00001691  ADC14_setSampleHoldTrigger                 
+00001809  ADC14_toggleConversionTrigger              
+00001cf9  ADC14_unregisterInterrupt                  
+000056e5  C$$EXIT                                    
+0000584d  CPU_basepriGet                             
+0000583f  CPU_basepriSet                             
+00005819  CPU_cpsid                                  
+0000582f  CPU_cpsie                                  
+00005825  CPU_primask                                
+0000583b  CPU_wfi                                    
+000025e5  Crystalfontz128x128_Init                   
+000026f9  Crystalfontz128x128_SetDrawFrame           
+00002827  Crystalfontz128x128_SetOrientation         
+00001209  EUSCIA2_IRQHandler                         
+000024af  EUSCI_A_SPI_changeClockPhasePolarity       
+00002563  EUSCI_A_SPI_clearInterruptFlag             
+00002593  EUSCI_A_SPI_disable                        
+00002531  EUSCI_A_SPI_disableInterrupt               
+0000257d  EUSCI_A_SPI_enable                         
+00002517  EUSCI_A_SPI_enableInterrupt                
+0000254b  EUSCI_A_SPI_getInterruptStatus             
+000025a9  EUSCI_A_SPI_getReceiveBufferAddressForDMA  
+000025b7  EUSCI_A_SPI_getTransmitBufferAddressForDMA 
+000025c5  EUSCI_A_SPI_isBusy                         
+0000242f  EUSCI_A_SPI_masterChangeClock              
+00002507  EUSCI_A_SPI_receiveData                    
+0000240f  EUSCI_A_SPI_select4PinFunctionality        
+00002465  EUSCI_A_SPI_slaveInit                      
+000024f1  EUSCI_A_SPI_transmitData                   
+000022e1  EUSCI_B_SPI_changeClockPhasePolarity       
+00002395  EUSCI_B_SPI_clearInterruptFlag             
+000023c5  EUSCI_B_SPI_disable                        
+00002363  EUSCI_B_SPI_disableInterrupt               
+000023af  EUSCI_B_SPI_enable                         
+00002349  EUSCI_B_SPI_enableInterrupt                
+0000237d  EUSCI_B_SPI_getInterruptStatus             
+000023db  EUSCI_B_SPI_getReceiveBufferAddressForDMA  
+000023e9  EUSCI_B_SPI_getTransmitBufferAddressForDMA 
+000023f7  EUSCI_B_SPI_isBusy                         
+00002265  EUSCI_B_SPI_masterChangeClock              
+00002339  EUSCI_B_SPI_receiveData                    
+00002245  EUSCI_B_SPI_select4PinFunctionality        
+00002297  EUSCI_B_SPI_slaveInit                      
+00002323  EUSCI_B_SPI_transmitData                   
+00003a3f  GPIO_clearInterruptFlag                    
+000039ff  GPIO_disableInterrupt                      
+000039dd  GPIO_enableInterrupt                       
+00003a97  GPIO_getEnabledInterruptStatus             
+000039af  GPIO_getInputPinValue                      
+00003a21  GPIO_getInterruptStatus                    
+00003a61  GPIO_interruptEdgeSelect                   
+00003b57  GPIO_registerInterrupt                     
+00003757  GPIO_setAsInputPin                         
+0000390b  GPIO_setAsInputPinWithPullDownResistor     
+0000395d  GPIO_setAsInputPinWithPullUpResistor       
+0000371d  GPIO_setAsOutputPin                        
+00003821  GPIO_setAsPeripheralModuleFunctionInputPin 
+0000379d  GPIO_setAsPeripheralModuleFunctionOutputPin
+00003b13  GPIO_setDriveStrengthHigh                  
+00003b35  GPIO_setDriveStrengthLow                   
+000038a5  GPIO_setOutputHighOnPin                    
+000038c7  GPIO_setOutputLowOnPin                     
+000038e9  GPIO_toggleOutputOnPin                     
+00003b77  GPIO_unregisterInterrupt                   
+00004c35  Graphics_clearDisplay                      
+000050b7  Graphics_clearDisplayOnDisplay             
+00005009  Graphics_drawHorizontalLineOnDisplay       
+00003c09  Graphics_drawImage                         
+000035a9  Graphics_drawLine                          
+0000328d  Graphics_drawLineH                         
+00003329  Graphics_drawLineV                         
+00004fc5  Graphics_drawMultiplePixelsOnDisplay       
+00004c47  Graphics_drawPixel                         
+00004f9b  Graphics_drawPixelOnDisplay                
+000043e1  Graphics_drawRectangle                     
+00002d97  Graphics_drawString                        
+00003225  Graphics_drawStringCentered                
+0000503d  Graphics_drawVerticalLineOnDisplay         
+00004483  Graphics_fillRectangle                     
+00005071  Graphics_fillRectangleOnDisplay            
+00004c27  Graphics_flushBuffer                       
+000050a5  Graphics_flushOnDisplay                    
+00004c09  Graphics_getDisplayHeight                  
+00004bf9  Graphics_getDisplayWidth                   
+00004ba7  Graphics_getFontBaseline                   
+00004bdd  Graphics_getFontHeight                     
+00004beb  Graphics_getFontMaxWidth                   
+00004c19  Graphics_getHeightOfDisplay                
+00003f5d  Graphics_getImageColors                    
+00003f6b  Graphics_getImageHeight                    
+00003f79  Graphics_getImageWidth                     
+00003fd1  Graphics_getOffScreen8BPPSize              
+00003f87  Graphics_getOffscreen1BppImageSize         
+00003fad  Graphics_getOffscreen4BppImageSize         
+000045e7  Graphics_getRectangleIntersection          
+00003215  Graphics_getStringBaseline                 
+0000326d  Graphics_getStringHeight                   
+0000327d  Graphics_getStringMaxWidth                 
+00002c9d  Graphics_getStringWidth                    
+00004ca1  Graphics_getWidthOfDisplay                 
+00004a49  Graphics_initContext                       
+000046cd  Graphics_isPointWithinRectangle            
+00004595  Graphics_isRectangleOverlap                
+00004b5d  Graphics_setBackgroundColor                
+00004b77  Graphics_setBackgroundColorTranslated      
+00004a93  Graphics_setClipRegion                     
+00004b8d  Graphics_setFont                           
+00004bb5  Graphics_setForegroundColor                
+00004bcb  Graphics_setForegroundColorTranslated      
+0000508f  Graphics_translateColorOnDisplay           
+000052d5  HAL_LCD_PortInit                           
+00005305  HAL_LCD_SpiInit                            
+0000533b  HAL_LCD_writeCommand                       
+00005363  HAL_LCD_writeData                          
+000041b3  Interrupt_disableInterrupt                 
+00004003  Interrupt_disableMaster                    
+000043b1  Interrupt_disableSleepOnIsrExit            
+00004141  Interrupt_enableInterrupt                  
+00003ff3  Interrupt_enableMaster                     
+0000439f  Interrupt_enableSleepOnIsrExit             
+0000411b  Interrupt_getPriority                      
+00004093  Interrupt_getPriorityGrouping              
+0000437f  Interrupt_getPriorityMask                  
+00004399  Interrupt_getVectorTableAddress            
+00004225  Interrupt_isEnabled                        
+000042b1  Interrupt_pendInterrupt                    
+00004013  Interrupt_registerInterrupt                
+000040cb  Interrupt_setPriority                      
+00004079  Interrupt_setPriorityGrouping              
+0000436f  Interrupt_setPriorityMask                  
+00004389  Interrupt_setVectorTableAddress            
+00004321  Interrupt_unpendInterrupt                  
+00004065  Interrupt_unregisterInterrupt              
+200009c0  Lcd_FlagRead                               
+200009c1  Lcd_FontSolid                              
+200009c2  Lcd_Orientation                            
+200009c3  Lcd_PenSolid                               
+200009ba  Lcd_ScreenHeigth                           
+200009bc  Lcd_ScreenWidth                            
+200009be  Lcd_TouchTrim                              
+UNDEFED   SHT$$INIT_ARRAY$$Base                      
+UNDEFED   SHT$$INIT_ARRAY$$Limit                     
+00001f03  SPI_changeClockPhasePolarity               
+00001e5d  SPI_changeMasterClock                      
+000020b5  SPI_clearInterruptFlag                     
+00002037  SPI_disableInterrupt                       
+00001f91  SPI_disableModule                          
+00002011  SPI_enableInterrupt                        
+00001f75  SPI_enableModule                           
+00002085  SPI_getEnabledInterruptStatus              
+0000205d  SPI_getInterruptStatus                     
+00001fad  SPI_getReceiveBufferAddressForDMA          
+00001fc9  SPI_getTransmitBufferAddressForDMA         
+00001d71  SPI_initMaster                             
+00001e85  SPI_initSlave                              
+00001ff5  SPI_isBusy                                 
+00001f59  SPI_receiveData                            
+000020db  SPI_registerInterrupt                      
+00001e37  SPI_selectFourPinFunctionality             
+00001f33  SPI_transmitData                           
+00002199  SPI_unregisterInterrupt                    
+20000574  SystemCoreClock                            
+00004721  SystemCoreClockUpdate                      
+00004995  SystemInit                                 
+4000480c  WDTCTL_SYM                                 
+20010000  __STACK_END                                
+00000200  __STACK_SIZE                               
+0000af94  __TI_CINIT_Base                            
+0000afac  __TI_CINIT_Limit                           
+0000af8c  __TI_Handler_Table_Base                    
+0000af94  __TI_Handler_Table_Limit                   
+000055b5  __TI_auto_init                             
+2000055c  __TI_cleanup_ptr                           
+00005a23  __TI_decompress_none                       
+00005a31  __TI_decompress_rle24                      
+20000560  __TI_dtors_ptr                             
+20000564  __TI_enable_exit_profile_output            
+ffffffff  __TI_pprof_out_hndl                        
+ffffffff  __TI_prof_data_size                        
+ffffffff  __TI_prof_data_start                       
+00000000  __TI_static_base__                         
+0000542d  __aeabi_cdcmpeq                            
+0000542d  __aeabi_cdcmple                            
+000054b3  __aeabi_cdrcmple                           
+000057d1  __aeabi_d2iz                               
+00004cb9  __aeabi_dadd                               
+00004e65  __aeabi_ddiv                               
+000051d9  __aeabi_dmul                               
+00004caf  __aeabi_dsub                               
+00005857  __aeabi_i2d                                
+00005539  __aeabi_memclr                             
+00005539  __aeabi_memclr4                            
+00005539  __aeabi_memclr8                            
+00005391  __aeabi_memcpy                             
+00005391  __aeabi_memcpy4                            
+00005391  __aeabi_memcpy8                            
+0000553b  __aeabi_memset                             
+0000553b  __aeabi_memset4                            
+0000553b  __aeabi_memset8                            
+ffffffff  __binit__                                  
+ffffffff  __c_args__                                 
+00003fef  __mpu_init                                 
+2000fe00  __stack                                    
+000059e5  _args_main                                 
+00005691  _c_int00                                   
+0000a3ba  _ctypes_                                   
+20000568  _lock                                      
+00005a0b  _nop                                       
+00005a03  _register_lock                             
+000059fd  _register_unlock                           
+0000471f  _system_post_cinit                         
+00005a37  _system_pre_init                           
+2000056c  _unlock                                    
+000056e9  abort                                      
+0000a9b4  aggron4BPP_COMP_RLE4                       
+20000554  arrow_index                                
+00005739  atoi                                       
+ffffffff  binit                                      
+000050d1  calcDamage                                 
+0000516f  calcEff                                    
+20000558  case8Counter                               
+000003e7  checkButtons                               
+00005785  copy_in                                    
+00005885  draw_aggron                                
+000058a5  draw_gengar                                
+000058c5  draw_gyrados                               
+000058e5  draw_jolteon                               
+00005905  draw_machoke                               
+00005925  draw_metagross                             
+00005945  draw_shiftry                               
+00005965  draw_swampert                              
+00005985  draw_swellow                               
+000059a5  draw_title                                 
+000059c5  draw_typhlosion                            
+20000998  enHP                                       
+200009c4  enMove                                     
+200009c5  enemyPokemon                               
+000056f1  exit                                       
+20000000  g_pfnRAMVectors                            
+20000978  g_sContext                                 
+0000a914  g_sCrystalfontz128x128                     
+0000a4bc  g_sFontFixed6x8                            
+0000a9c4  gengar4BPP_COMP_RLE4                       
+0000a9d4  gyrados4BPP_COMP_RLE4                      
+000003cf  initButtons                                
+00000245  initClock                                  
+000002cf  initDisplay                                
+2000054c  initFirstTransmit                          
+00000315  initInterrupts                             
+00000467  initSpiMaster                              
+000004a9  initSpiSlave                               
+00000000  interruptVectors                           
+0000a9e4  jolteon4BPP_COMP_RLE4                      
+200009c6  last_button1                               
+0000a9f4  machoke4BPP_COMP_RLE4                      
+00000205  main                                       
+20000570  main_func_sp                               
+0000022f  mapPorts                                   
+00005391  memcpy                                     
+00005541  memset                                     
+0000aa04  metagross4BPP_COMP_RLE4                    
+200000e4  move_list                                  
+200009a0  myHP                                       
+20000550  myLastPokemon                              
+200009c7  myMove                                     
+20000535  myPokemon                                  
+200009a8  onEneEff                                   
+200009b0  onYouEff                                   
+200003a4  pokemon_list                               
+0000aadc  portMapping                                
+20000544  rectX                                      
+20000548  rectY                                      
+20000540  selectCounter                              
+20000538  selectScreenDebounce                       
+00000141  selectScreenDraw                           
+0000aa14  shiftry4BPP_COMP_RLE4                      
+0000a998  spiMasterConfig                            
+0000aa24  spiSlaveConfig                             
+20000534  state                                      
+0000aa34  swampert4BPP_COMP_RLE4                     
+0000aa44  swellow4BPP_COMP_RLE4                      
+0000aa54  title4BPP_COMP_RLE4                        
+2000053c  transmitCounter                            
+00006978  type_advantage                             
+0000aa64  typhlosion4BPP_COMP_RLE4                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                       
+-------   ----                                       
+00000000  __TI_static_base__                         
+00000000  interruptVectors                           
+00000141  selectScreenDraw                           
+00000200  __STACK_SIZE                               
+00000205  main                                       
+0000022f  mapPorts                                   
+00000245  initClock                                  
+000002cf  initDisplay                                
+00000315  initInterrupts                             
+000003cf  initButtons                                
+000003e7  checkButtons                               
+00000467  initSpiMaster                              
+000004a9  initSpiSlave                               
+00000539  ADC14_IRQHandler                           
+00001209  EUSCIA2_IRQHandler                         
+000015c9  ADC14_enableModule                         
+000015d1  ADC14_disableModule                        
+000015e7  ADC14_enableSampleTimer                    
+00001611  ADC14_disableSampleTimer                   
+00001627  ADC14_initModule                           
+0000166d  ADC14_setResolution                        
+00001687  ADC14_getResolution                        
+00001691  ADC14_setSampleHoldTrigger                 
+000016d3  ADC14_setSampleHoldTime                    
+000016fd  ADC14_configureMultiSequenceMode           
+00001793  ADC14_configureSingleSampleMode            
+000017e9  ADC14_enableConversion                     
+00001809  ADC14_toggleConversionTrigger              
+0000182b  ADC14_disableConversion                    
+00001837  ADC14_isBusy                               
+00001855  ADC14_configureConversionMemory            
+000018fd  ADC14_enableComparatorWindow               
+0000198d  ADC14_disableComparatorWindow              
+000019eb  ADC14_setComparatorWindowValue             
+00001a71  ADC14_setResultFormat                      
+00001a9b  ADC14_getResult                            
+00001ab5  ADC14_getMultiSequenceResult               
+00001b21  ADC14_getResultArray                       
+00001b95  ADC14_enableReferenceBurst                 
+00001bab  ADC14_disableReferenceBurst                
+00001bc1  ADC14_setPowerMode                         
+00001c03  ADC14_enableInterrupt                      
+00001c2f  ADC14_disableInterrupt                     
+00001c5b  ADC14_getInterruptStatus                   
+00001c85  ADC14_getEnabledInterruptStatus            
+00001cb5  ADC14_clearInterruptFlag                   
+00001ce5  ADC14_registerInterrupt                    
+00001cf9  ADC14_unregisterInterrupt                  
+00001d71  SPI_initMaster                             
+00001e37  SPI_selectFourPinFunctionality             
+00001e5d  SPI_changeMasterClock                      
+00001e85  SPI_initSlave                              
+00001f03  SPI_changeClockPhasePolarity               
+00001f33  SPI_transmitData                           
+00001f59  SPI_receiveData                            
+00001f75  SPI_enableModule                           
+00001f91  SPI_disableModule                          
+00001fad  SPI_getReceiveBufferAddressForDMA          
+00001fc9  SPI_getTransmitBufferAddressForDMA         
+00001ff5  SPI_isBusy                                 
+00002011  SPI_enableInterrupt                        
+00002037  SPI_disableInterrupt                       
+0000205d  SPI_getInterruptStatus                     
+00002085  SPI_getEnabledInterruptStatus              
+000020b5  SPI_clearInterruptFlag                     
+000020db  SPI_registerInterrupt                      
+00002199  SPI_unregisterInterrupt                    
+00002245  EUSCI_B_SPI_select4PinFunctionality        
+00002265  EUSCI_B_SPI_masterChangeClock              
+00002297  EUSCI_B_SPI_slaveInit                      
+000022e1  EUSCI_B_SPI_changeClockPhasePolarity       
+00002323  EUSCI_B_SPI_transmitData                   
+00002339  EUSCI_B_SPI_receiveData                    
+00002349  EUSCI_B_SPI_enableInterrupt                
+00002363  EUSCI_B_SPI_disableInterrupt               
+0000237d  EUSCI_B_SPI_getInterruptStatus             
+00002395  EUSCI_B_SPI_clearInterruptFlag             
+000023af  EUSCI_B_SPI_enable                         
+000023c5  EUSCI_B_SPI_disable                        
+000023db  EUSCI_B_SPI_getReceiveBufferAddressForDMA  
+000023e9  EUSCI_B_SPI_getTransmitBufferAddressForDMA 
+000023f7  EUSCI_B_SPI_isBusy                         
+0000240f  EUSCI_A_SPI_select4PinFunctionality        
+0000242f  EUSCI_A_SPI_masterChangeClock              
+00002465  EUSCI_A_SPI_slaveInit                      
+000024af  EUSCI_A_SPI_changeClockPhasePolarity       
+000024f1  EUSCI_A_SPI_transmitData                   
+00002507  EUSCI_A_SPI_receiveData                    
+00002517  EUSCI_A_SPI_enableInterrupt                
+00002531  EUSCI_A_SPI_disableInterrupt               
+0000254b  EUSCI_A_SPI_getInterruptStatus             
+00002563  EUSCI_A_SPI_clearInterruptFlag             
+0000257d  EUSCI_A_SPI_enable                         
+00002593  EUSCI_A_SPI_disable                        
+000025a9  EUSCI_A_SPI_getReceiveBufferAddressForDMA  
+000025b7  EUSCI_A_SPI_getTransmitBufferAddressForDMA 
+000025c5  EUSCI_A_SPI_isBusy                         
+000025e5  Crystalfontz128x128_Init                   
+000026f9  Crystalfontz128x128_SetDrawFrame           
+00002827  Crystalfontz128x128_SetOrientation         
+00002c9d  Graphics_getStringWidth                    
+00002d97  Graphics_drawString                        
+00003215  Graphics_getStringBaseline                 
+00003225  Graphics_drawStringCentered                
+0000326d  Graphics_getStringHeight                   
+0000327d  Graphics_getStringMaxWidth                 
+0000328d  Graphics_drawLineH                         
+00003329  Graphics_drawLineV                         
+000035a9  Graphics_drawLine                          
+0000371d  GPIO_setAsOutputPin                        
+00003757  GPIO_setAsInputPin                         
+0000379d  GPIO_setAsPeripheralModuleFunctionOutputPin
+00003821  GPIO_setAsPeripheralModuleFunctionInputPin 
+000038a5  GPIO_setOutputHighOnPin                    
+000038c7  GPIO_setOutputLowOnPin                     
+000038e9  GPIO_toggleOutputOnPin                     
+0000390b  GPIO_setAsInputPinWithPullDownResistor     
+0000395d  GPIO_setAsInputPinWithPullUpResistor       
+000039af  GPIO_getInputPinValue                      
+000039dd  GPIO_enableInterrupt                       
+000039ff  GPIO_disableInterrupt                      
+00003a21  GPIO_getInterruptStatus                    
+00003a3f  GPIO_clearInterruptFlag                    
+00003a61  GPIO_interruptEdgeSelect                   
+00003a97  GPIO_getEnabledInterruptStatus             
+00003b13  GPIO_setDriveStrengthHigh                  
+00003b35  GPIO_setDriveStrengthLow                   
+00003b57  GPIO_registerInterrupt                     
+00003b77  GPIO_unregisterInterrupt                   
+00003c09  Graphics_drawImage                         
+00003f5d  Graphics_getImageColors                    
+00003f6b  Graphics_getImageHeight                    
+00003f79  Graphics_getImageWidth                     
+00003f87  Graphics_getOffscreen1BppImageSize         
+00003fad  Graphics_getOffscreen4BppImageSize         
+00003fd1  Graphics_getOffScreen8BPPSize              
+00003fef  __mpu_init                                 
+00003ff3  Interrupt_enableMaster                     
+00004003  Interrupt_disableMaster                    
+00004013  Interrupt_registerInterrupt                
+00004065  Interrupt_unregisterInterrupt              
+00004079  Interrupt_setPriorityGrouping              
+00004093  Interrupt_getPriorityGrouping              
+000040cb  Interrupt_setPriority                      
+0000411b  Interrupt_getPriority                      
+00004141  Interrupt_enableInterrupt                  
+000041b3  Interrupt_disableInterrupt                 
+00004225  Interrupt_isEnabled                        
+000042b1  Interrupt_pendInterrupt                    
+00004321  Interrupt_unpendInterrupt                  
+0000436f  Interrupt_setPriorityMask                  
+0000437f  Interrupt_getPriorityMask                  
+00004389  Interrupt_setVectorTableAddress            
+00004399  Interrupt_getVectorTableAddress            
+0000439f  Interrupt_enableSleepOnIsrExit             
+000043b1  Interrupt_disableSleepOnIsrExit            
+000043e1  Graphics_drawRectangle                     
+00004483  Graphics_fillRectangle                     
+00004595  Graphics_isRectangleOverlap                
+000045e7  Graphics_getRectangleIntersection          
+000046cd  Graphics_isPointWithinRectangle            
+0000471f  _system_post_cinit                         
+00004721  SystemCoreClockUpdate                      
+00004995  SystemInit                                 
+00004a49  Graphics_initContext                       
+00004a93  Graphics_setClipRegion                     
+00004b5d  Graphics_setBackgroundColor                
+00004b77  Graphics_setBackgroundColorTranslated      
+00004b8d  Graphics_setFont                           
+00004ba7  Graphics_getFontBaseline                   
+00004bb5  Graphics_setForegroundColor                
+00004bcb  Graphics_setForegroundColorTranslated      
+00004bdd  Graphics_getFontHeight                     
+00004beb  Graphics_getFontMaxWidth                   
+00004bf9  Graphics_getDisplayWidth                   
+00004c09  Graphics_getDisplayHeight                  
+00004c19  Graphics_getHeightOfDisplay                
+00004c27  Graphics_flushBuffer                       
+00004c35  Graphics_clearDisplay                      
+00004c47  Graphics_drawPixel                         
+00004ca1  Graphics_getWidthOfDisplay                 
+00004caf  __aeabi_dsub                               
+00004cb9  __aeabi_dadd                               
+00004e65  __aeabi_ddiv                               
+00004f9b  Graphics_drawPixelOnDisplay                
+00004fc5  Graphics_drawMultiplePixelsOnDisplay       
+00005009  Graphics_drawHorizontalLineOnDisplay       
+0000503d  Graphics_drawVerticalLineOnDisplay         
+00005071  Graphics_fillRectangleOnDisplay            
+0000508f  Graphics_translateColorOnDisplay           
+000050a5  Graphics_flushOnDisplay                    
+000050b7  Graphics_clearDisplayOnDisplay             
+000050d1  calcDamage                                 
+0000516f  calcEff                                    
+000051d9  __aeabi_dmul                               
+000052d5  HAL_LCD_PortInit                           
+00005305  HAL_LCD_SpiInit                            
+0000533b  HAL_LCD_writeCommand                       
+00005363  HAL_LCD_writeData                          
+00005391  __aeabi_memcpy                             
+00005391  __aeabi_memcpy4                            
+00005391  __aeabi_memcpy8                            
+00005391  memcpy                                     
+0000542d  __aeabi_cdcmpeq                            
+0000542d  __aeabi_cdcmple                            
+000054b3  __aeabi_cdrcmple                           
+00005539  __aeabi_memclr                             
+00005539  __aeabi_memclr4                            
+00005539  __aeabi_memclr8                            
+0000553b  __aeabi_memset                             
+0000553b  __aeabi_memset4                            
+0000553b  __aeabi_memset8                            
+00005541  memset                                     
+000055b5  __TI_auto_init                             
+00005691  _c_int00                                   
+000056e5  C$$EXIT                                    
+000056e9  abort                                      
+000056f1  exit                                       
+00005739  atoi                                       
+00005785  copy_in                                    
+000057d1  __aeabi_d2iz                               
+00005819  CPU_cpsid                                  
+00005825  CPU_primask                                
+0000582f  CPU_cpsie                                  
+0000583b  CPU_wfi                                    
+0000583f  CPU_basepriSet                             
+0000584d  CPU_basepriGet                             
+00005857  __aeabi_i2d                                
+00005885  draw_aggron                                
+000058a5  draw_gengar                                
+000058c5  draw_gyrados                               
+000058e5  draw_jolteon                               
+00005905  draw_machoke                               
+00005925  draw_metagross                             
+00005945  draw_shiftry                               
+00005965  draw_swampert                              
+00005985  draw_swellow                               
+000059a5  draw_title                                 
+000059c5  draw_typhlosion                            
+000059e5  _args_main                                 
+000059fd  _register_unlock                           
+00005a03  _register_lock                             
+00005a0b  _nop                                       
+00005a23  __TI_decompress_none                       
+00005a31  __TI_decompress_rle24                      
+00005a37  _system_pre_init                           
+00006978  type_advantage                             
+0000a3ba  _ctypes_                                   
+0000a4bc  g_sFontFixed6x8                            
+0000a914  g_sCrystalfontz128x128                     
+0000a998  spiMasterConfig                            
+0000a9b4  aggron4BPP_COMP_RLE4                       
+0000a9c4  gengar4BPP_COMP_RLE4                       
+0000a9d4  gyrados4BPP_COMP_RLE4                      
+0000a9e4  jolteon4BPP_COMP_RLE4                      
+0000a9f4  machoke4BPP_COMP_RLE4                      
+0000aa04  metagross4BPP_COMP_RLE4                    
+0000aa14  shiftry4BPP_COMP_RLE4                      
+0000aa24  spiSlaveConfig                             
+0000aa34  swampert4BPP_COMP_RLE4                     
+0000aa44  swellow4BPP_COMP_RLE4                      
+0000aa54  title4BPP_COMP_RLE4                        
+0000aa64  typhlosion4BPP_COMP_RLE4                   
+0000aadc  portMapping                                
+0000af8c  __TI_Handler_Table_Base                    
+0000af94  __TI_CINIT_Base                            
+0000af94  __TI_Handler_Table_Limit                   
+0000afac  __TI_CINIT_Limit                           
+20000000  g_pfnRAMVectors                            
+200000e4  move_list                                  
+200003a4  pokemon_list                               
+20000534  state                                      
+20000535  myPokemon                                  
+20000538  selectScreenDebounce                       
+2000053c  transmitCounter                            
+20000540  selectCounter                              
+20000544  rectX                                      
+20000548  rectY                                      
+2000054c  initFirstTransmit                          
+20000550  myLastPokemon                              
+20000554  arrow_index                                
+20000558  case8Counter                               
+2000055c  __TI_cleanup_ptr                           
+20000560  __TI_dtors_ptr                             
+20000564  __TI_enable_exit_profile_output            
+20000568  _lock                                      
+2000056c  _unlock                                    
+20000570  main_func_sp                               
+20000574  SystemCoreClock                            
+20000978  g_sContext                                 
+20000998  enHP                                       
+200009a0  myHP                                       
+200009a8  onEneEff                                   
+200009b0  onYouEff                                   
+200009ba  Lcd_ScreenHeigth                           
+200009bc  Lcd_ScreenWidth                            
+200009be  Lcd_TouchTrim                              
+200009c0  Lcd_FlagRead                               
+200009c1  Lcd_FontSolid                              
+200009c2  Lcd_Orientation                            
+200009c3  Lcd_PenSolid                               
+200009c4  enMove                                     
+200009c5  enemyPokemon                               
+200009c6  last_button1                               
+200009c7  myMove                                     
+2000fe00  __stack                                    
+20010000  __STACK_END                                
+4000480c  WDTCTL_SYM                                 
+ffffffff  __TI_pprof_out_hndl                        
+ffffffff  __TI_prof_data_size                        
+ffffffff  __TI_prof_data_start                       
+ffffffff  __binit__                                  
+ffffffff  __c_args__                                 
+ffffffff  binit                                      
+UNDEFED   SHT$$INIT_ARRAY$$Base                      
+UNDEFED   SHT$$INIT_ARRAY$$Limit                     
+
+[316 symbols]

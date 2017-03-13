@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="6.2.0"/>
+	<deviceVariant value="MSP432P401R"/>
+	<deviceFamily value="MSP432"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="15.12.3.LTS"/>
+	<isElfFormat value="true"/>
+	<linkerCommandFile value="msp432p401r.cmd"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=BOOSTXL-EDUMKII_JoyStick_MSP432P401R.projectspec.BOOSTXL-EDUMKII_JoyStick_MSP432P401R,"/>
+	<origin value="C:\ti\msp\MSP432Ware_3_50_00_02\examples\boards\MSP-EXP432P401R\MSP-EXP432P401R_Software_Examples\Firmware\Source\BOOSTXL-EDUMKII_JoyStick_MSP432P401R\CCS\BOOSTXL-EDUMKII_JoyStick_MSP432P401R.projectspec"/>
+	<filesToOpen value="main.c,"/>
+</projectOptions>
