@@ -1,1 +1,2 @@
 # Pokemon-Battle
+This project is built using two MSP432 microcontrollers. To put it shortly, this project aims to recreate the old Pokemon Gameboy Advance vibes. However, it only uses the battle features of the game. The entire game is implemented using onboard timers, joystick, buttons, LCD screen, and SPI communications.
